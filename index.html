@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <title>BI CBFEST 2025</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>BI CBFEST 2026</title>
     <script src="./assets/js/lib.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
@@ -166,92 +169,94 @@
         /* 0px 1px 4px rgba(0,0,0,0.15); */
       }
 
-    /* Gold-filled answer box (selected/correct letter) */
-    .gold-filled-box {
-      background: linear-gradient(135deg, #b48235 0%, #f8ee9a 100%);
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(180, 130, 53, 0.25);
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 96px;
-      height: 96px;
-      margin: 8px;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #fff;
-      letter-spacing: 2px;
-      position: relative;
-      transition: box-shadow 0.2s;
-    }
+      /* Gold-filled answer box (selected/correct letter) */
+      .gold-filled-box {
+        background: linear-gradient(135deg, #b48235 0%, #f8ee9a 100%);
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(180, 130, 53, 0.25);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 96px;
+        margin: 8px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 2px;
+        position: relative;
+        transition: box-shadow 0.2s;
+      }
 
-    /* Gold-outline answer/choice box (unselected) */
-    .gold-outline-box {
-      background: transparent;
-      border: 3px solid #f8ee9a;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 96px;
-      height: 96px;
-      margin: 8px;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #b48235;
-      letter-spacing: 2px;
-      position: relative;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
+      /* Gold-outline answer/choice box (unselected) */
+      .gold-outline-box {
+        background: transparent;
+        border: 3px solid #f8ee9a;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 96px;
+        margin: 8px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #b48235;
+        letter-spacing: 2px;
+        position: relative;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
 
-    /* Empty answer box (for blanks) */
-    .empty-box {
-      background: transparent;
-      border: 3px solid #bcbcbc;
-      border-radius: 16px;
-      width: 96px;
-      height: 96px;
-      margin: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      color: #bcbcbc;
-      box-sizing: border-box;
-      position: relative;
-    }
+      /* Empty answer box (for blanks) */
+      .empty-box {
+        background: transparent;
+        border: 3px solid #bcbcbc;
+        border-radius: 16px;
+        width: 96px;
+        height: 96px;
+        margin: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        color: #bcbcbc;
+        box-sizing: border-box;
+        position: relative;
+      }
 
-    /* Letter text inside boxes */
-    .letter-content {
-      font-family: "Orbitron", Arial, Helvetica, sans-serif;
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.25);
-      letter-spacing: 2px;
-      user-select: none;
-    }
+      /* Letter text inside boxes */
+      .letter-content {
+        font-family: "Orbitron", Arial, Helvetica, sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        letter-spacing: 2px;
+        user-select: none;
+      }
 
-    /* "CHOOSE THE LETTERS" title style */
-    .choose-letters-title {
-      font-family: "Orbitron", Arial, Helvetica, sans-serif;
-      font-size: 2rem;
-      font-weight: bold;
-      background: linear-gradient(90deg, #b48235 0%, #f8ee9a 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-fill-color: transparent;
-      letter-spacing: 2px;
-      text-align: center;
-      margin: 24px 0 16px 0;
-      text-transform: uppercase;
-    }
+      /* "CHOOSE THE LETTERS" title style */
+      .choose-letters-title {
+        font-family: "Orbitron", Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        background: linear-gradient(90deg, #b48235 0%, #f8ee9a 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        letter-spacing: 2px;
+        text-align: center;
+        margin: 24px 0 16px 0;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body class="">
     <!-- save screen Video Layer  -->
-    <video
+    <!-- <video
       autoplay
       loop
       muted
@@ -273,9 +278,28 @@
         type="video/mp4"
         style="display: none"
       />
-    </video>
+    </video> -->
+
+    <img
+      id="save_screen"
+      src="./assets/KV.jpg"
+      alt="Save Screen"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.7s;
+        object-fit: cover;
+      "
+    />
+
     <!-- Background Video -->
-    <video
+    <!-- <video
       id="bg_video"
       autoplay
       loop
@@ -294,7 +318,25 @@
         id="bg_sub_menu"
         style="display: none"
       />
-    </video>
+    </video> -->
+
+    <img
+      id="bg_menu_utama"
+      src="./assets/img/Menu Utama.webp"
+      alt="Keyvisual Menu Utama"
+      class="absolute inset-0 -z-10 w-full h-full object-cover object-center"
+      style="opacity: 1; isolation: isolate"
+    />
+
+    <!-- Background Sub Menu (Disembunyikan secara default dengan class 'hidden') -->
+    <img
+      id="bg_sub_menu"
+      src="./assets/img/Sub Menu.webp"
+      alt="Keyvisual Sub Menu"
+      class="absolute inset-0 -z-10 w-full h-full object-cover object-center hidden"
+      style="opacity: 1; isolation: isolate"
+    />
+
     <!-- Fade overlay video for transition -->
     <video
       id="bg_video_fade"
@@ -334,7 +376,6 @@
     <script src="./assets/js/data/layanan-operasional-tresuri/RAS.js"></script>
     <script src="./assets/js/data/layanan-operasional-tresuri/TMOI.js"></script>
     <script src="./assets/js/data/layanan-operasional-tresuri/MODRMO.js"></script>
-    
 
     <!-- Perizinan Terpadu -->
     <script src="assets/js/data/perizinan-terpadu/integrated-licensing.js"></script>
@@ -363,7 +404,7 @@
     <!-- --- -->
 
     <script src="./assets/js/data/quiz/quiz.js"></script>
-    
+
     <script src="./assets/js/jquery.js"></script>
 
     <script>
@@ -413,7 +454,7 @@
         PSMD2,
         PSMD3,
         RMCD,
-        
+
         // quiz
         quiz,
       ];
@@ -495,8 +536,8 @@
           } else {
             $("#content").html(homeData.data);
           }
-          if (tab == 'quiz') {
-            initGame()
+          if (tab == "quiz") {
+            initGame();
           }
         } else {
           $("#content").html(homeData.data);
@@ -521,16 +562,15 @@
         });
 
         // Fade out
-        $content.css({ opacity: '0' });
+        $content.css({ opacity: "0" });
 
-          $content.html(newContent);
-          // Fade in
-          $content.css({ opacity: "1" });
+        $content.html(newContent);
+        // Fade in
+        $content.css({ opacity: "1" });
 
-          if (typeof callback === "function") callback();
+        if (typeof callback === "function") callback();
 
-          // Remove transition after animation to avoid interfering with other changes
-        
+        // Remove transition after animation to avoid interfering with other changes
       }
 
       $(document).on("click", "[data-next]", function () {
@@ -540,7 +580,7 @@
         if (!dataContent) return;
 
         fadeContentTransition(dataContent.data, nextTab, function () {
-          if (nextTab == 'quiz') {
+          if (nextTab == "quiz") {
             initGame();
           }
           updateBgVideo(nextTab);
@@ -561,7 +601,7 @@
         if (!dataContent) return;
 
         fadeContentTransition(dataContent.data, nextTab, function () {
-          if (nextTab == 'quiz') {
+          if (nextTab == "quiz") {
             initGame();
           }
           updateBgVideo(nextTab);
@@ -648,7 +688,7 @@
         ["mousemove", "mousedown", "keydown", "touchstart", "scroll"].forEach(
           function (eventName) {
             window.addEventListener(eventName, resetInactivityTimer, true);
-          }
+          },
         );
 
         // Start timer on load
