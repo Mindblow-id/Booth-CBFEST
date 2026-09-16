@@ -324,7 +324,7 @@
       id="bg_menu_utama"
       src="./assets/img/Menu Utama.webp"
       alt="Keyvisual Menu Utama"
-      class="absolute inset-0 -z-10 w-full h-full object-cover object-center"
+      class="background-menu absolute inset-0 -z-10 w-full h-full object-cover object-center"
       style="opacity: 1; isolation: isolate"
     />
 
@@ -333,7 +333,7 @@
       id="bg_sub_menu"
       src="./assets/img/Sub Menu.webp"
       alt="Keyvisual Sub Menu"
-      class="absolute inset-0 -z-10 w-full h-full object-cover object-center hidden"
+      class="background-menu absolute inset-0 -z-10 w-full h-full object-cover object-center hidden"
       style="opacity: 1; isolation: isolate"
     />
 
@@ -479,8 +479,8 @@
        * @param {string} tab
        */
       function updateBgVideo(tab) {
-        var $video = $("#bg_video");
-        var $sources = $video.find("source");
+        // var $video = $("#bg_video");
+        // var $sources = $video.find("source");
         var bgId = getBgVideoIdByTab(tab);
 
         // Only update if the background video id has changed
@@ -488,6 +488,18 @@
           return;
         }
 
+        let $mainBg = $(".background-menu");
+        $mainBg.addClass("hidden");
+        $("#" + bgId).removeClass("hidden");
+
+
+
+
+        return;
+        // not used logic, since we are using images instead of video
+        //
+        //
+        //
         var $activeSource = $("#" + bgId);
         if (!$activeSource.length) return;
 
