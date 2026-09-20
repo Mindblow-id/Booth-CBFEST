@@ -35,9 +35,8 @@ try {
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(base + prefix);
     if (failAudio) {
-      await page.getByRole('button', { name: 'Coba lagi' }).waitFor({ timeout: 60000 });
       failAudio = false;
-      await page.getByRole('button', { name: 'Coba lagi' }).click();
+      await page.reload();
     }
     await page.waitForFunction(() => document.querySelector('[role=status]')?.textContent === 'Siap offline', null, { timeout: 120000 });
     const cachedCount = await page.evaluate(async () => {
@@ -60,15 +59,17 @@ try {
         await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, 'fmdd-menu.png'), fullPage: true });
       }
       const sections = [
-        { id: 'FMDD-MFI', folder: 'market-financial-infrastructure', pages: 3 },
-        { id: 'FMDD-DERIVATIVE', folder: 'puva-derivative', pages: 5 },
-        { id: 'FMDD-VASTRA', folder: 'puva-vastra', pages: 2 },
-        { id: 'FMDD-TERMINOLOGY', folder: 'terminology-notes', pages: 3 },
+        { id: 'FMDD-MFI', folder: 'market-financial-infrastructure', pages: 3, title: 'Market Financial Structure' },
+        { id: 'FMDD-DERIVATIVE', folder: 'puva-derivative', pages: 5, title: 'PUVA Derivative' },
+        { id: 'FMDD-VASTRA', folder: 'puva-vastra', pages: 2, title: 'PUVA Vastra' },
+        { id: 'FMDD-TERMINOLOGY', folder: 'terminology-notes', pages: 3, title: 'Terminology Notes' },
       ];
       for (const section of sections) {
         await page.locator(`c-button[data-next="${section.id}1"]`).click();
         for (let number = 1; number <= section.pages; number++) {
           assert.equal(new URL(page.url()).searchParams.get('tab'), `${section.id}${number}`);
+          assert.equal((await page.locator('#content h3').textContent()).replace(/\s+/g, ' ').trim(), section.title);
+          assert.equal(await page.locator('#content h4').count(), 0);
           const filename = number === 1 ? 'table.png' : `table-${number - 1}.png`;
           const contentImage = page.locator(`#content img[src="assets/img/FMDD/${section.folder}/${filename}"]`);
           await contentImage.evaluate(img => img.decode());
@@ -90,7 +91,33 @@ try {
       await page.reload();
       await page.locator('#content img[src$="puva-derivative/table-2.png"]').evaluate(img => img.decode());
       console.log('FMDD: ETIBI entry, four menus, all 13 image pages, forward/back navigation and direct reload passed offline.');
+
+      await page.goto(base + prefix + '?tab=PSPD');
+      for (let number = 1; number <= 5; number++) {
+        const tab = number === 1 ? 'PSPD' : `PSPD${number - 1}`;
+        const filename = number === 1 ? 'table.png' : `table-${number - 1}.png`;
+        assert.equal(new URL(page.url()).searchParams.get('tab'), tab);
+        assert.equal((await page.locator('#content h3').textContent()).replace(/\s+/g, ' ').trim(), 'Payment System Policy Department');
+        assert.equal((await page.locator('#content').textContent()).includes(`${number} / 5`), false, `${tab}: page indicator must be hidden`);
+        await page.locator(`#content img[src="assets/img/PSPD/${filename}"]`).evaluate(img => img.decode());
+        assert.ok(await page.locator('#content nav').evaluate(nav => nav.getBoundingClientRect().bottom <= innerHeight), `${tab}: pagination should fit the portrait booth screen`);
+        if ((number === 1 || number === 5) && process.env.SCREENSHOT_DIR) {
+          await page.screenshot({ path: path.join(process.env.SCREENSHOT_DIR, `PSPD${number === 1 ? '' : '4'}.png`), fullPage: true });
+        }
+        if (number < 5) await page.locator(`c-button[data-next="PSPD${number}"]`).click();
+      }
+      await page.locator('c-button[data-next="PSMD1"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('tab'), 'PSMD1');
+      await page.goto(base + prefix + '?tab=PSPD4');
+      assert.equal(await page.locator('#content nav c-button[data-previous]:not([data-previous="integrated-licensing"])').count(), 0, 'PSPD must not show a Previous Page button');
+      await page.locator('c-button[data-previous="integrated-licensing"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('tab'), 'integrated-licensing');
+      await page.goto(base + prefix + '?tab=PSPD2');
+      await page.reload();
+      await page.locator('#content img[src$="PSPD/table-2.png"]').evaluate(img => img.decode());
+      console.log('PSPD: five supplied tables, forward/back navigation, return to menu and direct reload passed offline.');
     }
+    assert.equal(await page.locator('[role=status]').isVisible(), false, 'offline status must not be visible to visitors');
     // Render every content page while offline, including previously unopened images.
     const result = await page.evaluate(async () => {
       const broken = [];
@@ -117,7 +144,7 @@ try {
       await (await caches.open(name)).delete(new URL('assets/audio/quiz.mp3', scope).href);
     });
     await page.reload();
-    await page.getByRole('button', { name: 'Coba lagi' }).click();
+    await page.evaluate(async () => (await navigator.serviceWorker.getRegistration()).active.postMessage({ type: 'BOOTH_CACHE_REPAIR' }));
     await page.waitForFunction(() => document.querySelector('[role=status]')?.textContent === 'Siap offline', null, { timeout: 60000 });
     assert.deepEqual(errors, []);
     console.log(`${prefix}: ${cachedCount} assets cached; ${result.pages} pages/images and media passed offline; retry and eviction repair passed.`);
@@ -134,7 +161,7 @@ try {
   console.log('Update installed; closing last tab…');
   await page.close();
   const reopened = await context.newPage();
-  await reopened.goto(base + '/event/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await reopened.goto(base + '/event/', { waitUntil: 'commit', timeout: 15000 });
   await reopened.waitForFunction(() => document.querySelector('[role=status]')?.textContent === 'Siap offline');
   await reopened.waitForFunction(async () => (await caches.keys()).filter(name => name.startsWith(`cbfest:${location.origin}/event/:`)).every(name => name.endsWith('browser-update-test')));
   console.log('Update waits for tabs to close, then activates and cleans old scoped cache.');

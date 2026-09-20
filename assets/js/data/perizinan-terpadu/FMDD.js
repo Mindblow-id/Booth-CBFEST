@@ -2,7 +2,7 @@
 const FMDDSections = [
   {
     id: 'FMDD-MFI',
-    title: 'Market Financial Infrastructure',
+    title: 'Market Financial Structure',
     menuLabel: 'Market Financial<br>Infrastructure',
     folder: 'market-financial-infrastructure',
     pages: 3,
@@ -39,7 +39,7 @@ const FMDDHeader = `
   </div>
 `;
 
-const FMDDTitle = `
+const FMDDMenuTitle = `
   <h3 class="w-fit mx-auto uppercase text-center mb-10" style="font-size:clamp(24px,4.45vw,48px);line-height:1.125">
     <span class="title block w-fit mx-auto" style="margin-bottom:0">Financial Market</span>
     <span class="title block w-fit mx-auto" style="margin-bottom:0">Development Department</span>
@@ -51,7 +51,7 @@ const FMDD = {
   data: `
     ${FMDDHeader}
     <div class="pt-80 px-6 pb-16 mx-auto w-full max-w-[1080px]">
-      ${FMDDTitle}
+      ${FMDDMenuTitle}
       <nav aria-label="Financial Market Development Department" class="flex flex-col items-center gap-14 mt-48 mx-auto w-full max-w-[680px]">
         ${FMDDSections.map(section => `
           <c-button class="block w-full" data-next="${section.id}1">
@@ -74,8 +74,9 @@ const FMDDPages = FMDDSections.flatMap(section =>
       data: `
         ${FMDDHeader}
         <div class="pt-80 px-6 pb-12 mx-auto w-full max-w-[1080px]">
-          ${FMDDTitle}
-          <h4 class="text-center text-2xl text-white mb-6">${section.title}</h4>
+          <h3 class="title w-fit mx-auto uppercase text-center mb-10" style="font-size:clamp(26px,4.45vw,48px);line-height:1.125">
+            ${section.title}
+          </h3>
           <img
             src="assets/img/FMDD/${section.folder}/${filename}"
             alt="${section.title} — page ${page} of ${section.pages}"

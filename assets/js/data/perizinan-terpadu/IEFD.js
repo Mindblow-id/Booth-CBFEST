@@ -20,7 +20,7 @@ const IEFD = {
 
     <div class="pt-80 px-6 container mx-auto w-fit">
       <h3 class="text-5xl title w-fit mx-auto uppercase text-center">
-        Islamic Economics and Finance Department
+        Islamic Economics and Finance Department (Sharia PUVA PArticipant)
       </h3>
 
       <img src="assets/img/IEFD/table.png" >

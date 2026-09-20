@@ -18,7 +18,7 @@ const LK1Data = {
       </h2>
     </div>
 
-    <div class="pt-72 container mx-auto ">
+    <div class="cbs-profile pt-72 container mx-auto ">
       <h1 class="text-[3.2em] title text-center uppercase leading-16">
         Banking Services, Licensing, and Tresury Operations Department
       </h1>
@@ -30,7 +30,7 @@ const LK1Data = {
         </h1>
       </c-card>
       <div class="flex items-center justify-center mt-20"> 
-        <img src="assets/img/bank-segi-lima.png" class="w-[500px] color-dodge z-10" >
+        <img src="assets/img/bank-segi-lima.png" class="block w-[500px] h-auto z-10" width="1240" height="1200" alt="Bank Indonesia central banking services." >
       </div>
       <p class="text-center text-4xl font-medium text-shadow mt-20" style="font-family: Arial, Helvetica, sans-serif;">
         Central Banking Services are service provided by Bank Indonesia to its customers to support the implementation of Bank Indonesia’s duties related to monetary, macroprudential, and payment system which includes current account services and the settlement of customer’s financial transaction

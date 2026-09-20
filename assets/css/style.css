@@ -1,0 +1,67 @@
+/* Keep transparent Central Banking Services artwork legible over the backdrop. */
+.cbs-page {
+  width: 100%;
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 320px 56px 16px;
+}
+
+.cbs-page > p,
+.cbs-profile > p {
+  line-height: 1.25;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
+}
+
+.cbs-diagram {
+  width: 100%;
+  margin: 0;
+  padding: 24px;
+  border: 1px solid rgba(109, 225, 240, 0.3);
+  border-radius: 16px;
+  background: #071127;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  isolation: isolate;
+}
+
+.cbs-diagram img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: normal;
+}
+
+.cbs-diagram > img {
+  width: 100%;
+}
+
+/* These exports contain glow effects on black; screen removes their dark halos.
+   The isolated, solid panel keeps the result independent of the page backdrop. */
+.cbs-diagram .cbs-glow {
+  mix-blend-mode: screen;
+}
+
+.cbs-diagram > img + img {
+  margin-top: 24px;
+}
+
+.cbs-diagram > .cbs-diagram-legend {
+  width: min(40%, 360px);
+  margin: 16px 0 0 auto;
+}
+
+.cbs-parties {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.cbs-parties img {
+  width: min(100%, 240px);
+  margin: 0 auto 24px;
+}
+
+.cbs-diagram > .cbs-sla {
+  margin-top: 32px;
+}

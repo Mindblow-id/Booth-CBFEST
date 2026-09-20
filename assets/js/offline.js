@@ -1,5 +1,7 @@
 (() => {
   const panel = document.createElement('div');
+  // Cache stays active for the booth, but its operational messages stay out of the visitor UI.
+  panel.hidden = true;
   panel.style.cssText = 'position:fixed;bottom:10px;right:10px;z-index:10000;padding:8px 12px;border-radius:8px;background:rgba(0,0,0,.8);color:#fff;font:12px Arial,sans-serif;max-width:360px';
   const status = document.createElement('span');
   status.setAttribute('role', 'status');

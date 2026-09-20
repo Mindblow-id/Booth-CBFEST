@@ -18,7 +18,7 @@ const LCTS = {
       </h2>
     </div>
 
-    <div class="pt-80 container mx-14 w-fit">
+    <div class="cbs-page">
       <h3 class="text-5xl title w-fit mx-auto uppercase text-center">
         Letter Of Credit (L/C) Transaction Services
       </h3>
@@ -28,8 +28,10 @@ const LCTS = {
       </p>
 
       <div class="flex flex-col justify-center items-center mt-12">
-        <img class=" " src="assets/img/LCTS/lcts.png"  >
-        <img class=" " src="assets/img/LCTS/hand.png"  >
+        <figure class="cbs-diagram" aria-label="Letter of credit transaction services eligibility and service levels">
+          <img src="assets/img/LCTS/lcts.png" width="2072" height="1225" alt="Parties eligible to request L/C services: central government agencies, state-owned enterprises, and other approved parties.">
+          <img src="assets/img/LCTS/hand.png" width="2072" height="1041" alt="Service levels: five working days for requesting L/C services and two working days for L/C issuance after correct documents are submitted.">
+        </figure>
         
 
         <div class="flex justify-between items-center w-full mt-8"> 

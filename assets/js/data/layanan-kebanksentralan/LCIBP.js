@@ -18,18 +18,35 @@ const LCIBP = {
       </h2>
     </div>
 
-    <div class="pt-80 container mx-14 w-fit">
+    <div class="cbs-page">
       <h3 class="text-5xl title w-fit mx-auto uppercase text-center">
         Letter Of Credit (L/C) Issuance Business Process
       </h3>
 
-      <p class="mt-12 text-center text-3xl text-shadow" style="font-family: Arial, Helvetica, sans-serif;">
+      <p class="mt-12 text-center text-3xl" style="font-family: Arial, Helvetica, sans-serif; line-height: 1.5; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);">
         L/C is a definite promise that cannot be cancelled unilaterally (irrevocable) and is a guarantee by the issuing bank to make payment based on the documents delivered in accordance with agreed terms and conditions.  
       </p>
 
       <div class="flex flex-col justify-center items-center mt-8">
-        <img class=" color-dodge" src="assets/img/LCIBP/lcibp.png"  >
-        <img class=" mt-12" src="assets/img/LCIBP/notes.png"  >
+        <figure
+          class="cbs-diagram"
+          aria-label="Letter of credit issuance process and terminology notes"
+        >
+          <img
+            class="block w-full h-auto"
+            src="assets/img/LCIBP/lcibp.png"
+            width="2234"
+            height="754"
+            alt="L/C issuance flow: Ministry or Institution, Bank Services Division, Applicant System (CBS/SWIFT), Advising Bank, and Beneficiary; with coordination involving the Ministry of Finance and related departments in Bank Indonesia."
+          >
+          <img
+            class="block w-full h-auto mt-8"
+            src="assets/img/LCIBP/notes.png"
+            width="2072"
+            height="272"
+            alt="Notes: SKP L/C means Power of Attorney to Charge L/C; SPP L/C means L/C Opening Approval Letter; SP2D means Disbursement Order. Communication symbols indicate the means of communication."
+          >
+        </figure>
         
         <c-card class="w-full h-[350px] mt-14">
             <div class="flex flex-col p-6">
