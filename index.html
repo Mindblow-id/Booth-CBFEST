@@ -9,6 +9,7 @@
     <title>BI CBFEST 2026</title>
     <script src="./assets/js/lib.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="./assets/js/offline.js" defer></script>
     <style>
       ::-webkit-scrollbar {
         display: none;
@@ -282,7 +283,7 @@
 
     <img
       id="save_screen"
-      src="./assets/KV.jpg"
+      src="./assets/img/KV.jpg"
       alt="Save Screen"
       style="
         position: fixed;
@@ -387,6 +388,7 @@
     <script src="assets/js/data/perizinan-terpadu/IEFD.js"></script>
     <script src="assets/js/data/perizinan-terpadu/MASMD.js"></script>
     <script src="assets/js/data/perizinan-terpadu/MASMD2.js"></script>
+    <script src="assets/js/data/perizinan-terpadu/FMDD.js"></script>
     <script src="assets/js/data/perizinan-terpadu/FMDD1.js"></script>
     <script src="assets/js/data/perizinan-terpadu/FMDD2.js"></script>
     <script src="assets/js/data/perizinan-terpadu/FMDD3.js"></script>
@@ -440,6 +442,8 @@
         IEFD,
         MASMD,
         MASMD2,
+        FMDD,
+        ...FMDDPages,
         FMDD1,
         FMDD2,
         FMDD3,
@@ -577,6 +581,9 @@
         $content.css({ opacity: "0" });
 
         $content.html(newContent);
+        if (nextTab === "FMDD" || nextTab?.startsWith("FMDD-")) {
+          window.scrollTo(0, 0);
+        }
         // Fade in
         $content.css({ opacity: "1" });
 
