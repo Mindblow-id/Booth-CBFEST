@@ -1,7 +1,6 @@
-
 const SRTS = {
-    id: 'SRTS',
-    data: `
+  id: "SRTS",
+  data: `
     
     <div class="flex justify-between mx-auto w-full px-14 items-center absolute top-40"> 
       <c-button
@@ -35,22 +34,32 @@ const SRTS = {
                     Absorption
                         <ul class="list-disc ml-8">
                             <li class="Arial">
-                                SBI/SBIS: Sertifikat Bank Indonesia/ Sharia Bank Indonesia Certificate
+                                SBI/SBIS: Sertifikat Bank Indonesia / Sharia Bank Indonesia Certificate
                             </li>
                             <li class="Arial">
-                                SRBI: Sekuritas Rupiah Bank Indonesia
+                                SDBI: Surat Deposito Bank Indonesia (Bank Indonesia Deposit Certificate)
+
                             </li>
                             <li class="Arial">
-                                RR SBN/SBSN: Reverse Repo of SBN/SBSN (Reverse Repo of Government Bonds/Government Sharia Bonds)
+                                SRBI: Sukuk Bank Indonesia (Bank Indonesia Sukuk)
+
+                            </li>
+                            <li class="Arial">
+                                RR SBN/SBSN: Reverse Repo of SBN/SBSN (Reverse Repo of Government 
+                            </li>
+                            <li class="Arial">
+                                Bonds / Government Sharia Bonds)
+
                             </li>
                             <li class="Arial">
                                 TD: Term Deposits
                             </li>
                             <li class="Arial">
                                 Sell SBN Outright: Selling Government Bonds Outright
+
                             </li>
                             <li class="Arial">
-                                SukBI: Sukuk Bank Indonesia
+                                SukBI: Sukuk Bank Indonesia (Bank Indonesia Sukuk)
                             </li>
                         </ul>
                 </li>
@@ -119,5 +128,5 @@ const SRTS = {
           </c-button>
         </div>
     </div>
-    `
-}
+    `,
+};

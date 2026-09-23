@@ -41,7 +41,7 @@ const SFTS = {
                  Foreign Exchange
                 </li>
                 <li class="Arial">
-                 Gold Deposits
+                 Gold Transactions
                 </li>
             </ul>
         </div>
@@ -53,13 +53,13 @@ const SFTS = {
             </p>
             <ul class="list-disc mx-12 text-2xl">
                 <li class="Arial">
-                    Money Market (Term Deposit overnight, regular, conventional, syariah, and DHE SDA)
+                    Money Market (FX Term Deposit conventional, and Sharia)
                 </li>
                 <li class="Arial">
-                    Foreign Exchange (Forex interventions: spot, forward, swap, Domestic Non-Deliverable Forward (DNDF), hedging swaps, etc.)
+                    Foreign Exchange (spot, forward, swap, Domestic Non-Deliverable Forward, hedging swaps, etc.)
                 </li>
                 <li class="Arial">
-                    SBBI Forex, SVBI, SUVBI
+                    BI FX Bills (SBBI), BI Foreign Currency Securities (SVBI & SUVBI)
                 </li>
             </ul>
         </div>
@@ -72,28 +72,25 @@ const SFTS = {
             </p>
             <ul class="list-disc mx-12 text-2xl">
                 <li class="Arial">
-                    Fund Transfer Transactions (Cover).
+                    Fund Transfer Transactions.
                 </li>
                 <li class="Arial">
-                    Transactions related to External Portfolio Manager (EPM).
+                    Transactions related to External Portfolio Manager.
                 </li>
                 <li class="Arial">
-                    Transactions related to Third Party Securities Lending (TPSL).
+                    Transactions related to Third Party Securities Lending.
                 </li>
                 <li class="Arial">
-                    Transactions involving receipts and/or payments related to current accounts, claim/debit interest, penalties for settlement failures of monetary operation transactions, custody fees, and trading fees.
+                    Transactions related to current accounts, claim/debit interest, penalties for settlement failures of monetary operation transactions, custody fees, and trading fees.
                 </li>
                 <li class="Arial">
-                    Transactions related to International Financial Cooperation (IFC) al: Local Currency Bilateral Agreement (LCBSA), Bilateral Swap Arrangement (BSA), Bilateral Currency Swap Arrangement (BCSA), dan Chiang Initiative Multilateralization (CMIM).
+                    Transaction related to International Financial Cooperation such as: Local Currency Bilateral Swap, Bilateral Swap Arrangement, Bilateral Currency Swap Arrangement, and Chiang Mai Initiative Multilateralization.
                 </li>
                 <li class="Arial">
-                    Transactions related to Special Drawing Rights (SDR).
+                    Transactions related to Special Drawing Rights.
                 </li>
                 <li class="Arial">
-                    Transactions related to current accounts originating from BI-ERP and BI-CBS.
-                </li>
-                <li class="Arial">
-                    Fund Allocation for Foreign Representative Offices (KPwLN).
+                    Fund Allocation for Foreign Representative Offices.
                 </li>
             </ul>
         </div>

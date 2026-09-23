@@ -22,6 +22,10 @@ const RAS = {
       <h3 class="text-5xl title w-fit mx-auto uppercase text-center">
         Reserve Asset Scoping
       </h3>
+
+      <p class="mt-12 text-center text-3xl text-shadow" style="font-family: Arial, Helvetica, sans-serif;">
+          Accommodating the Reserve Management Reform and Global Financial Market Challenges through the Enhancement of Treasury Infrastructure Along with Strengthening the Settlement Mechanism
+      </p>
     <div class="w-full flex flex-col items-center -mt-8">
         <img class="w-[824px] h-fit"  src="assets/img/RAS/Graph.png"> 
         <img class="w-[824px] h-fit"  src="assets/img/RAS/Table.png"> 

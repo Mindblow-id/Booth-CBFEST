@@ -25,7 +25,7 @@ const treasuryProfile = {
 
       <c-card class=" w-full h-52">
         <p class="uppercase text-gradient text-2xl my-12 mx-6 text-center">
-            OPPT Carries out the functions of monetary operation transaction settlement and reserves management settlement, as well as serving as the operational head office for RTGS, SKNBI and BI-FAST, and Administration of gold reserve
+            DPPT Carries out the functions of monetary operation transaction settlement and reserves management settlement, as well as serving as the operational head office for RTGS, SKNBI and BI-FAST, and Administration of gold reserve
         </p>
       </c-card>
 
