@@ -23,7 +23,7 @@ const MASMD2 = {
       Monetary and Asset Securities Management Department
       </h3>
 
-      <img src="assets/img/MASMD/table2.png" >
+      <img src="assets/img/MASMD/table-2.png" >
       
       <div class="flex justify-between items-center">
         <div class="w-96 mt-8">

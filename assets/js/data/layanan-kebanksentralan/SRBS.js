@@ -18,14 +18,16 @@ const SRBS = {
       </h2>
     </div>
 
-    <div class="pt-80 container mx-14 w-fit">
+    <div class="cbs-page">
       <h3 class="text-5xl title mx-auto uppercase text-center w-[700px] ">
         Sub-Registry Business Process
       </h3>
 
       <div class="flex flex-col justify-center items-center mt-14">
-        <img class=" color-dodge" src="assets/img/SRBS/illus-2.png" >    
-        <img class=" mt-12" src="assets/img/SRBS/illus-1.png" >    
+        <figure class="cbs-diagram" aria-label="Sub-registry business process">
+          <img src="assets/img/SRBS/illus-2.png" width="2072" height="1128" alt="Sub-registry process: service request, licensing review, banking services review, principle approval, account processing, and KSEI SID registration.">
+          <img src="assets/img/SRBS/illus-1.png" width="2072" height="304" alt="Notification for parties requesting sub-registry services.">
+        </figure>
 
         <c-card class="w-full h-[380px] mt-14">
             <div class="flex flex-col p-6">

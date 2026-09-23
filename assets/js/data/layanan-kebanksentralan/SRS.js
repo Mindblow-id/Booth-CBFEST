@@ -18,7 +18,7 @@ const SRS = {
       </h2>
     </div>
 
-    <div class="pt-80 container mx-14 w-fit">
+    <div class="cbs-page">
       <h3 class="text-5xl title w-fit mx-auto uppercase text-center">
         Sub-Registry Services
       </h3>
@@ -28,19 +28,24 @@ const SRS = {
       </p>
 
       <div class="flex flex-col justify-center items-center mt-14">
-        <img class=" " src="assets/img/SRS/sub-title.png"  >    
-        <div class="grid grid-cols-3 justify-items-center items-end gap-20 px-12 mt-10">
-            <img class="mt-0" src="assets/img/SRS/MF.png"  >
-            <img class="mt-0" src="assets/img/SRS/CG.png"  >
-            <img class="mt-0" src="assets/img/SRS/OAP.png"  >
-        </div>
-        <div class="grid grid-cols-3 justify-items-center items-start gap-4 mt-8">
-            <h5 class="text-2xl text-center">Ministry of Finance</h5>
-            <h5 class="text-2xl text-center">County Government</h5>
-            <h5 class="text-2xl text-center">Other Approved Parties</h5>
-        </div>
-
-        <img class=" mt-12" src="assets/img/SRS/SLA.png"  >    
+        <figure class="cbs-diagram" aria-label="Parties eligible for sub-registry services and service levels">
+          <img src="assets/img/SRS/sub-title.png" width="2072" height="202" alt="Parties who could request sub-registry services.">
+          <div class="cbs-parties">
+            <div>
+              <img src="assets/img/SRS/MF.png" width="556" height="555" alt="">
+              <h5 class="text-2xl">Ministry of Finance</h5>
+            </div>
+            <div>
+              <img src="assets/img/SRS/CG.png" width="556" height="555" alt="">
+              <h5 class="text-2xl">County Government</h5>
+            </div>
+            <div>
+              <img src="assets/img/SRS/OAP.png" width="556" height="555" alt="">
+              <h5 class="text-2xl">Other Approved Parties</h5>
+            </div>
+          </div>
+          <img class="cbs-sla" src="assets/img/SRS/SLA.png" width="2072" height="320" alt="Sub-registry requests are processed within two working days after correct documents are submitted; applicants must have a current account designated for cash settlement.">
+        </figure>
         
         <c-card class="w-full h-[225px] mt-14">
             <div class="flex flex-col p-6">

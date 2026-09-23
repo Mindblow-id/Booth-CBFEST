@@ -65,10 +65,10 @@ const ETIBI = {
           </div>
           <div class="absolute -right-5 bottom-35">
             <!-- Top Row Right -->
-            <button class="w-90" data-next="FMDD1">
+            <button class="w-90" data-next="FMDD">
               <img src="assets/img/button-bg-blue.png" alt="" class="w-full h-full object-cover -scale-x-100">
               <span class="pb-4 pl-20 pr-12 absolute inset-0 flex items-center justify-center text-white text-right text-md px-2">
-              Financial Market Development Departmen 
+              Financial Market Development Department
               </span>
             </button>
           </div>
@@ -113,7 +113,7 @@ const ETIBI = {
           <div class="absolute left-66 -bottom-115">
             <!-- Top Row Right -->
             <button class="w-90" data-next="RMCD">
-              <img src="/assets/img/btn-bg-center.png" alt="" class="w-full h-full object-cover -scale-x-100">
+              <img src="assets/img/btn-bg-center.png" alt="" class="w-full h-full object-cover -scale-x-100">
               <span class="px-12 pb-4 absolute inset-0 flex items-center justify-center text-white text-center text-md">
                 Report Management and Compliance Department
               </span>

@@ -18,7 +18,7 @@ const CAS = {
       </h2>
     </div>
 
-    <div class="pt-80 container mx-14 w-fit">
+    <div class="cbs-page">
       <h3 class="text-5xl title w-fit mx-auto uppercase">
         Central Banking Services
       </h3>
@@ -28,8 +28,10 @@ const CAS = {
       </p>
 
       <div class="flex flex-col justify-center items-center mt-12">
-        <img class=" color-dodge" src="assets/img/CAS/law.png"  >
-        <img class=" color-dodge mt-12" src="assets/img/CAS/sla.png"  >
+        <figure class="cbs-diagram" aria-label="Current account services eligibility and service levels">
+          <img class="cbs-glow" src="assets/img/CAS/law.png" width="2072" height="1240" alt="Parties required by law: banks and the Ministry of Finance.">
+          <img class="cbs-glow" src="assets/img/CAS/sla.png" width="2092" height="925" alt="Current account opening service levels and other eligible institutions.">
+        </figure>
 
         <div class="flex justify-between items-center w-full mt-12"> 
           <c-button data-previous="lk-type-of-service" class="w-80">

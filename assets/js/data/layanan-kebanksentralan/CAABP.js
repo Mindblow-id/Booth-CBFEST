@@ -18,8 +18,8 @@ const CAABP = {
       </h2>
     </div>
 
-    <div class="pt-80 container mx-14 w-fit">
-      <h3 class="text-5xl title w-fit mx-auto uppercase text-center">
+    <div class="cbs-page">
+      <h3 class="text-5xl title w-fit mx-auto uppercase text-center" style="margin-bottom:24px">
         Current Account Administration Business Process
       </h3>
 
@@ -27,12 +27,12 @@ const CAABP = {
         External party current account administration services provided by Bank Indonesia, which is a means of administering savings, deposit and withdrawal transactions that can be carried out in accordance with the provisions and requirements set by Bank Indonesia.
       </p>
 
-      <div class="flex flex-col justify-center items-center mt-8">
-        <img class=" color-dodge" src="assets/img/CAABP/caaabp.png"  >
-        <div class="w-full flex justify-end">
-        <img class="w-72 mt-4" src="assets/img/CAABP/moc.png"  >
-        </div>
-        <c-card class="w-full h-[400px] mt-12">
+      <div class="flex flex-col justify-center items-center mt-6">
+        <figure class="cbs-diagram" aria-label="Current account administration process">
+          <img class="cbs-glow" src="assets/img/CAABP/caaabp.png" width="2073" height="1148" alt="Current account administration flow from the customer's request through the licensing and banking services divisions, account processing, and notification.">
+          <img class="cbs-diagram-legend" src="assets/img/CAABP/moc.png" width="740" height="200" alt="Means of communication.">
+        </figure>
+        <c-card class="w-full h-[380px] mt-6">
             <div class="flex flex-col p-6">
                 <p class="text-button text-center text-3xl font-semibold w-fit mx-auto"> Information </p>
                 <div 
@@ -59,7 +59,7 @@ const CAABP = {
             </div>
         </c-card>
 
-        <div class="flex justify-between items-center w-full mt-8"> 
+        <div class="flex justify-between items-center w-full mt-6">
           <c-button data-previous="lk-type-of-service" class="w-96">
             <div class="flex justify-center items-center  px-8">
               <img src="assets/img/arrow-left-gold.svg" class="w-14">
