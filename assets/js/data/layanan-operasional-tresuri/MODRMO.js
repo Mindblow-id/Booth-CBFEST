@@ -20,7 +20,7 @@ const MODRMO = {
 
     <div class="pt-80 container mx-14 w-[968px]">
       <h3 class="text-5xl title w-fit mx-auto uppercase text-center">
-       modern office development and risk management operation
+       modern office development and risk management operations
       </h3>
 
       <p class="mt-14 text-center text-3xl text-shadow" style="font-family: Arial, Helvetica, sans-serif;">

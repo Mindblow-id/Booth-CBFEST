@@ -20,8 +20,11 @@ const TMOI = {
 
     <div class="pt-80 container mx-14 w-[968px]">
       <h3 class="text-5xl title w-fit mx-auto uppercase text-center">
-        treasury and monetary operation infrastructure
+        treasury and monetary operations infrastructure
       </h3>
+      <p class=" -mt-8 mb-4 text-center text-xl text-shadow" style="font-family: Arial, Helvetica, sans-serif;">
+          Facilitating the Development of Dynamic Monetary Operation Instrument through the Adoption of Front-to-Back Business Process and Treausry Infrastructure.
+      </p>
         <img class="w-full h-fit mt-12"  src="assets/img/TMOI/Monetary Operation.png"> 
     
      <div class="flex justify-between items-center w-full mt-12"> 
